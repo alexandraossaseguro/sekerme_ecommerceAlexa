@@ -11,7 +11,7 @@ class MyFromTextField extends StatelessWidget {
     required this.hintText,
     this.TextInputType,
     required this.obscureText,
-    required this.suffixIcon
+    required this.suffixIcon,
   });
 
   @override
@@ -33,7 +33,7 @@ class MyFromTextField extends StatelessWidget {
       obscureText: obscureText,
       keyboardType: TextInputType,
       decoration: InputDecoration(
-          labelText: labelText
+          labelText: labelText,
           hintStyle: TextStyle(
           color: Theme.of(context).colorScheme.primary.withOpacity(0.5),
       ),

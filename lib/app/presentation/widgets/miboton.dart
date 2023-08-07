@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 class MYBoton extends StatelessWidget {
-  final String Text;
+  final String text;
   final VoidCallback onPressed;
-  final function()? onTab;
+  final Function()? onTab;
 
   const MYBoton({
     super.key,
-    required this.Text,
+    required this.text,
     required this.onPressed,
     this.onTab
   });

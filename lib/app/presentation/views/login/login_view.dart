@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:unaslindas/app/presentation/widgets/miboton.dart';
 import 'package:unaslindas/app/presentation/widgets/my_from_text_field.dart';
 
 class LoginView extends StatelessWidget {
@@ -32,19 +33,19 @@ class LoginView extends StatelessWidget {
                 ),
                 const MyFromTextField(
                   labelText: 'Email',
-                  hintText: 'ingresa',
+                  hintText: 'Correo Eletronico',
                   TextInputType: TextInputType.emailAddress,
-                  obscureText: false,
+                  obscureText: true,
                   suffixIcon: false,
 
 
                 ),
                 const MyFromTextField(
                   labelText: 'contraseña',
-                  hintText: 'contraseña',
+                  hintText: 'Password',
                   TextInputType: TextInputType.visiblePassword,
                   obscureText: true,
-                  suffixIcon: true,
+                  suffixIcon :false,
                 ),
                 Padding(
                     padding: const  EdgeInsets.symmetric( horizontal: 1.0),
@@ -52,17 +53,27 @@ class LoginView extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       TextButton(onPressed: (){},
-                          child: Text('SE TE OLVIDO'))
-                    ],
+                          child: Text('Olvidates tu contraseña',
+                            style:TextStyle(
+                                color: Theme.of(context).colorScheme.primary),
+                            )
+                          )
+                    ]),
                   ),
-                )
-
-                //TextButton
+                   const SizedBox(
+                     height: 20,
+                   ),
+                MYBoton(text: "login",
+                    onPressed: (){}
+                ),
+                const SizedBox(
+                  height: 20),
+                const Divider(), //TextButton
               ],
             ),
           ),
         )
-      ),
-     );
+    ),
+    );
   }
 }
